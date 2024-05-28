@@ -13,7 +13,7 @@ class drawerWidget extends StatelessWidget {
             DrawerHeader(
               child: Center(
                 child: Text(
-                  "L O G O",
+                  "LOGO",
                   style: TextStyle(fontSize: 24),
                 ),
               ),
