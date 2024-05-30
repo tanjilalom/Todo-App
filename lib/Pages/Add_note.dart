@@ -14,7 +14,6 @@ class add_note extends StatelessWidget {
         backgroundColor: Colors.deepPurple[100],
         leading: BackButton(),
       ),
-
       backgroundColor: Colors.deepPurple[100],
       body: GestureDetector(
         onTap: () {},
@@ -24,7 +23,6 @@ class add_note extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 /*GestureDetector(
                   onTap: () => Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => homepage())),
@@ -40,43 +38,42 @@ class add_note extends StatelessWidget {
                 ),
                 Text(
                   'Input Details',
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
                 Form(
-                    child: Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20.0,
-                      ),
-                      child: TextFormField(
-                        style: TextStyle(
-                          fontSize: 18.0,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 20.0,
                         ),
-                        decoration: InputDecoration(
-                            labelText: 'Title',
-                            labelStyle: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            )),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20.0,
-                      ),
-                      child: TextFormField(
-                        maxLines: 5,
-                        style: TextStyle(
-                          fontSize: 18.0,
+                        child: TextFormField(
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                          decoration: InputDecoration(
+                              labelText: 'Title',
+                              labelStyle: TextStyle(
+                                fontSize: 18.0,
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              )),
                         ),
-                        decoration: InputDecoration(
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 20.0,
+                        ),
+                        child: TextFormField(
+                          maxLines: 5,
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                          decoration: InputDecoration(
                             labelText: 'Description',
                             labelStyle: TextStyle(
                               fontSize: 18.0,
@@ -84,11 +81,16 @@ class add_note extends StatelessWidget {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ))
+                      FloatingActionButton(
+                        onPressed: () {},
+                        child: Icon(Icons.save),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
