@@ -1,14 +1,13 @@
-/*
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class List extends StatelessWidget {
-  const List({
+class Listitem extends StatelessWidget {
+  Listitem({
     super.key,
     required this.index,
-  })
+  });
 
-  final int index;
+  int index;
 
   @override
   Widget build(BuildContext context) {
@@ -32,4 +31,4 @@ class List extends StatelessWidget {
 
     );
   }
-}*/
+}

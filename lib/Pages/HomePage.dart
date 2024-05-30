@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp_flutter/widget/drawer.dart';
+import 'package:todoapp_flutter/widget/list.dart';
 import 'package:todoapp_flutter/widget/searchbar.dart';
 import 'package:todoapp_flutter/widget/todo_item.dart';
 
@@ -14,28 +15,6 @@ class homepage extends StatefulWidget {
 
 class _homepageState extends State<homepage> {
 
-
-  Widget _buildNote(int index){
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 25.0),
-      child: Column(
-        children: [
-          ListTile(
-            title: Text('Note Title'),
-            subtitle: Text('This is a subtitle'),
-              leading: Checkbox(
-                onChanged: (value){
-                  print(value);
-                },
-                activeColor: Colors.blue, value: true,
-              ),
-          ),
-          Divider(height: 5.0, color: Colors.red,),
-        ],
-      ),
-
-    );
-  }
 
 
   @override
@@ -67,11 +46,11 @@ class _homepageState extends State<homepage> {
       ),
 
       body: ListView.builder(
-          padding: EdgeInsets.symmetric(vertical: 80.0),
+          padding: EdgeInsets.symmetric(vertical: 40.0),
           itemCount: 10,
           itemBuilder: (BuildContext context, int index){
             if(index == 0){
-              return Padding(padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+              return Padding(padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -86,12 +65,9 @@ class _homepageState extends State<homepage> {
               ),
               );
             }
-            return _buildNote(index);
+            return Listitem(index: index,);
           },
       ),
-
-
-
 
     );
   }
