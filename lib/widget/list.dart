@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:todoapp_flutter/Pages/Add_note.dart';
 import 'package:todoapp_flutter/Pages/HomePage.dart';
-
 import '../Model/note_model.dart';
 import '../database/database.dart';
 
